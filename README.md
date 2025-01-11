@@ -1,20 +1,13 @@
 ![Flutter Logo](https://img.icons8.com/color/48/flutter.png)
-
 # 🛠️ Flutter Directional Text App
-
-แอพพลิเคชั่นแสดงข้อความและไอคอนตามทิศทางที่ผู้ใช้กดปุ่มลูกศร โดยมีไอคอนประดับตกแต่งโดยรอบ
-
+An application that displays text and icons based on the direction of arrow key presses, decorated with surrounding icons
 ---
-
-## ✨ คุณสมบัติ
-- 👉 แสดงข้อความและไอคอนลูกศรตามทิศทางที่ผู้ใช้กดแป้นพิมพ์ (ซ้าย, ขวา, บน, ล่าง)
-- 🌟 มีไอคอนตกแต่งที่สวยงาม 4 ตำแหน่ง (ดาว, ❤️ หัวใจ, 👍 ชอบ, 👎 ไม่ชอบ)
-
+## ✨ Features
+- 👉 Display text and arrow icons according to keyboard arrow key inputs (Left, Right, Up, Down)
+- 🌟 Beautiful decorative icons in 4 positions (Star, ❤️ Heart, 👍 Thumbs Up, 👎 Thumbs Down)
 ---
-
-## 🌈 การปรับแต่งไอคอนให้สวยงาม
-
-### 1. 💡 การปรับแต่งไอคอนลูกศรหลัก
+## 🌈 Icon Customization Guide
+### 1. 💡 Main Arrow Icon Customization
 ```dart
 Icon(
   direction == "Left" ? Icons.arrow_left :
@@ -23,7 +16,7 @@ Icon(
   direction == "Down" ? Icons.arrow_downward : Icons.arrow_forward,
   size: 100,
   color: Colors.blue,
-  // เพิ่มเพิ่มเฟกต์เฌา
+  // Add shadow effect
   shadows: [
     Shadow(
       blurRadius: 10.0,
@@ -33,14 +26,12 @@ Icon(
   ],
 )
 ```
-
-### 2. 💧 การปรับแต่งไอคอนประดับ
-สามารถเพิ่มความสวยงามให้กับไอคอนประดับทั้ง 4 ตำแหน่งด้วยการใช้ `Container` และเพิ่มเอฟเฟกต์ต่างๆ:
-
+### 2. 💧 Decorative Icons Customization
+Enhance the beauty of all 4 decorative icons using `Container` and various effects:
 ```dart
 Container(
   decoration: BoxDecoration(
-    // เพิ่มเพิ่มเฟกต์เรืองแสง
+    // Add glow effect
     boxShadow: [
       BoxShadow(
         color: Colors.yellow.withOpacity(0.3),
@@ -56,10 +47,8 @@ Container(
   ),
 )
 ```
-
-### 3. 🔄 การเพิ่มแอนิเมชั่น
-สามารถเพิ่มแอนิเมชั่นให้กับไอคอนโดยใช้ `AnimatedContainer` หรือ `AnimatedPositioned`:
-
+### 3. 🔄 Adding Animations
+Add animations to icons using `AnimatedContainer` or `AnimatedPositioned`:
 ```dart
 AnimatedPositioned(
   duration: Duration(milliseconds: 300),
@@ -73,49 +62,39 @@ AnimatedPositioned(
   ),
 )
 ```
-
-### 4. 🌟 การปรับแต่งสี
-แนะนำให้ใช้โทนสีที่สวยงามและเข้ากัน:
-- ➡️ ไอคอนลูกศร: `Colors.blue[600]`
-- 🌟 ดาว: `Color(0xFFFFD700)` (สีทอง)
-- ❤️ หัวใจ: `Color(0xFFFF4081)` (สีชมพูสด)
-- 👍 ชอบ: `Color(0xFF4CAF50)` (สีเขียวสด)
-- 👎 ไม่ชอบ: `Color(0xFF9C27B0)` (สีม่วงสด)
-
+### 4. 🌟 Color Customization
+Recommended beautiful and harmonious color combinations:
+- ➡️ Arrow Icon: `Colors.blue[600]`
+- 🌟 Star: `Color(0xFFFFD700)` (Golden)
+- ❤️ Heart: `Color(0xFFFF4081)` (Vibrant Pink)
+- 👍 Thumbs Up: `Color(0xFF4CAF50)` (Vibrant Green)
+- 👎 Thumbs Down: `Color(0xFF9C27B0)` (Vibrant Purple)
 ---
-
-## 🚀 การติดตั้ง
-1. Clone โปรเจค
+## 🚀 Installation
+1. Clone the project
    ```bash
    git clone https://github.com/Phongphisut-Khenchat-Personal/Keyboard-Listener-and-Refresh-indicator.git
    ```
-2. รันคำสั่ง:
+2. Run command:
    ```bash
    flutter pub get
    ```
-3. รันแอพพลิเคชั่น:
+3. Run the application:
    ```bash
    flutter run
    ```
-
 ---
-
-## 📊 ข้อกำหนดขั้นต่ำ
-- Flutter SDK: 2.0.0 หรือสูงกว่า
-- Dart SDK: 2.12.0 หรือสูงกว่า
-
+## 📊 Minimum Requirements
+- Flutter SDK: 2.0.0 or higher
+- Dart SDK: 2.12.0 or higher
 ---
-
-## 🔍 การใช้งาน
-1. เปิดแอพพลิเคชั่น
-2. กดปุ่มลูกศรบนคีย์บอร์ด (ซ้าย, ขวา, บน, ล่าง)
-3. ไอคอนและข้อความจะเปลี่ยนตามทิศทางที่กด
-
+## 🔍 Usage
+1. Open the application
+2. Press arrow keys on keyboard (Left, Right, Up, Down)
+3. Icons and text will change according to the pressed direction
 ---
-
-## 🔄 การพัฒนาต่อยอด
-- เพิ่มเอฟเฟกต์พาร์ติเคิลเมื่อกดปุ่ม
-- เพิ่มเสียงเอฟเฟกต์
-- เพิ่มโหมดธีมมืด/สว่าง
-- เพิ่มการรองรับการสัมผัสหน้าจอ
-
+## 🔄 Future Developments
+- Add particle effects when pressing buttons
+- Add sound effects
+- Add dark/light theme modes
+- Add touch screen support
